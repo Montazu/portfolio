@@ -28,12 +28,16 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
+  align-items: center;
   flex-flow: column;
   padding: 3em 0;
+  background-size: clamp(40em, 90vw, 130em);
 }
 nav {
   display: flex;
   justify-content: space-around;
+  max-width: 50em;
+  width: 100%;
 }
 nav > a {
   color: var(--white);
@@ -44,7 +48,7 @@ nav > a {
 h1 {
   flex: 1;
   color: var(--blue-200);
-  font-size: 3em;
+  font-size: clamp(3em, 8vw, 10em);
   font-weight: 100;
   display: flex;
   justify-content: center;
@@ -52,7 +56,7 @@ h1 {
   flex-flow: column;
 }
 h1 > span {
-  font-size: 4rem;
+  font-size: 2.1em;
 }
 h1 > span,
 h2 {
