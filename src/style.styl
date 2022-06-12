@@ -1,0 +1,140 @@
+:root
+	--white: #fff
+	--black: #000
+	--blue-100: #16464c
+	--blue-200: #46E9FF
+	--logo: url("data:image/svg+xml, %3Csvg stroke='%2316464c' viewBox='0 0 330 178' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.1499 64.0875L41.9863 72.6456L63.9696 90.3154L85.9528 107.985L95.5719 115.914L68.2902 123.224C67.62 123.404 66.6703 123.738 65.9933 123.525C65.1119 123.248 60.9156 119.342 59.9174 118.464L47.5373 107.454C45.8365 105.958 42.9612 103.032 41.0415 102.19L38.0303 111.911L33.2872 126.236C32.8246 127.617 31.481 132.413 30.5285 133.152C30.0728 133.503 29.1203 133.72 28.5539 133.872L1.27218 141.182L5.58114 129.839L13.9901 108.165L24.3301 81.5155L31.1499 64.0875ZM264.23 1.63376L275.067 10.1919L297.05 27.8617L319.033 45.5315L328.652 53.4606L301.371 60.7708C300.701 60.9503 299.751 61.2844 299.074 61.071C298.192 60.7946 293.996 56.8886 292.998 56.0099L280.618 45C278.917 43.504 276.042 40.578 274.122 39.7361L271.111 49.4576L266.368 63.7822C265.905 65.1637 264.561 69.9588 263.609 70.698C263.153 71.0493 262.201 71.2663 261.634 71.4181L234.353 78.7282L238.662 67.3854L247.071 45.711L257.411 19.0618L264.23 1.63376ZM136.312 150.527L216.081 129.153L223.165 155.59L143.395 176.965L136.312 150.527Z'%3E%3C/path%3E%3C/svg%3E")
+
+*
+	box-sizing: border-box
+	margin: 0
+
+html, body, main, section
+	height: 100%
+
+html
+	scroll-behavior: smooth
+
+body
+	background-color: var(--black)
+	font-family: 'Poppins', sans-serif
+	font-size: 10px
+
+main
+	background-image: var(--logo)
+	background-repeat: no-repeat
+	background-position: center
+	display: flex
+	align-items: center
+	flex-flow: column
+	padding: 3em 0
+	background-size: clamp(40em, 90vw, 130em)
+	min-height: 35em
+
+nav
+	display: flex
+	justify-content: space-around
+	max-width: 50em
+	width: 100%
+
+	& > a
+		color: var(--white)
+		text-decoration: none
+		font-size: 1.8em
+		font-weight: 700
+
+h1
+	flex: 1
+	color: var(--blue-200)
+	font-size: clamp(3em, 8vw, 10em)
+	font-weight: 100
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-flow: column
+	line-height: 1.8em
+
+	& > span
+		font-size: 2.1em
+		position relative
+
+		&::after
+			content: attr(data-text)
+			position: absolute
+			color: var(--white)
+			left: 0
+			overflow: hidden
+			animation: loading .5s linear
+
+			@keyframes loading {
+				from {width: 0}
+				to {width: 100%}
+			}
+
+h1 > span, h2
+	color: transparent
+	font-weight: 900
+	-webkit-text-stroke: 2px var(--white)
+
+h2
+	font-size: 2.5rem
+
+section
+	margin: 0 auto
+	display: flex
+
+fieldset
+	border: solid var(--blue-200)
+	border-width: .1em .2em
+	height: 100%
+	width 100%
+	max-width: 130em
+	margin: 0 auto
+
+legend
+	color: var(--white)
+	font-weight: 900
+	font-size: 2.5rem
+
+.about
+	padding: 0 2em
+
+	& > fieldset
+		padding-left: 0
+		border-top-width: .2em
+		border-left: 0
+
+		& > legend
+			padding: 0 .5em 0 0
+
+.works
+	writing-mode: vertical-lr
+	text-orientation: upright
+	line-height: 0
+	letter-spacing: -2.4em
+	width 100%
+	padding: 0 2em
+	
+	& > fieldset
+		padding 10em
+		border-right: 0
+
+		& > legend
+			padding: 0.5em 0 1em 0
+
+.contact
+	writing-mode: vertical-rl
+	text-orientation: upright
+	line-height: 0
+	letter-spacing: -2.4em
+	width 100%
+	overflow: hidden
+	padding: 0 2em
+
+	& > fieldset
+		border-bottom-width: 2px
+		padding 10em
+		border-left: 0
+
+		& > legend
+			padding: 0.5em 0 1em 0

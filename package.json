@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Montazu/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Montazu/portfolio/issues"
+  },
+  "homepage": "https://github.com/Montazu/portfolio#readme",
+  "devDependencies": {
+    "@parcel/transformer-stylus": "^2.6.0",
+    "parcel": "^2.6.0"
+  }
+}
