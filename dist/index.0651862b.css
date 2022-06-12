@@ -1,0 +1,172 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --blue-100: #16464c;
+  --blue-200: #46e9ff;
+  --logo: url("data:image/svg+xml, %3Csvg stroke='%2316464c' viewBox='0 0 330 178' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.1499 64.0875L41.9863 72.6456L63.9696 90.3154L85.9528 107.985L95.5719 115.914L68.2902 123.224C67.62 123.404 66.6703 123.738 65.9933 123.525C65.1119 123.248 60.9156 119.342 59.9174 118.464L47.5373 107.454C45.8365 105.958 42.9612 103.032 41.0415 102.19L38.0303 111.911L33.2872 126.236C32.8246 127.617 31.481 132.413 30.5285 133.152C30.0728 133.503 29.1203 133.72 28.5539 133.872L1.27218 141.182L5.58114 129.839L13.9901 108.165L24.3301 81.5155L31.1499 64.0875ZM264.23 1.63376L275.067 10.1919L297.05 27.8617L319.033 45.5315L328.652 53.4606L301.371 60.7708C300.701 60.9503 299.751 61.2844 299.074 61.071C298.192 60.7946 293.996 56.8886 292.998 56.0099L280.618 45C278.917 43.504 276.042 40.578 274.122 39.7361L271.111 49.4576L266.368 63.7822C265.905 65.1637 264.561 69.9588 263.609 70.698C263.153 71.0493 262.201 71.2663 261.634 71.4181L234.353 78.7282L238.662 67.3854L247.071 45.711L257.411 19.0618L264.23 1.63376ZM136.312 150.527L216.081 129.153L223.165 155.59L143.395 176.965L136.312 150.527Z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body, main, section {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--black);
+  font-family: Poppins, sans-serif;
+  font-size: 10px;
+}
+
+main {
+  background-image: var(--logo);
+  min-height: 35em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: clamp(40em, 90vw, 130em);
+  flex-flow: column;
+  align-items: center;
+  padding: 3em 0;
+  display: flex;
+}
+
+nav {
+  max-width: 50em;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+}
+
+nav > a {
+  color: var(--white);
+  font-size: 1.8em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+h1 {
+  color: var(--blue-200);
+  flex-flow: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(3em, 8vw, 10em);
+  font-weight: 100;
+  line-height: 1.8em;
+  display: flex;
+}
+
+h1 > span {
+  font-size: 2.1em;
+  position: relative;
+}
+
+h1 > span:after {
+  content: attr(data-text);
+  color: var(--white);
+  animation: loading .5s linear;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
+@keyframes loading {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+h1 > span, h2 {
+  color: #0000;
+  -webkit-text-stroke: 2px var(--white);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+section {
+  margin: 0 auto;
+  display: flex;
+}
+
+fieldset {
+  border: solid var(--blue-200);
+  height: 100%;
+  width: 100%;
+  max-width: 130em;
+  border-width: .1em .2em;
+  margin: 0 auto;
+}
+
+legend {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.about {
+  padding: 0 2em;
+}
+
+.about > fieldset {
+  border-top-width: .2em;
+  border-left: 0;
+  padding-left: 0;
+}
+
+.about > fieldset > legend {
+  padding: 0 .5em 0 0;
+}
+
+.works {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: -2.4em;
+  width: 100%;
+  padding: 0 2em;
+  line-height: 0;
+}
+
+.works > fieldset {
+  border-right: 0;
+  padding: 10em;
+}
+
+.works > fieldset > legend {
+  padding: .5em 0 1em;
+}
+
+.contact {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: -2.4em;
+  width: 100%;
+  padding: 0 2em;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.contact > fieldset {
+  border-bottom-width: 2px;
+  border-left: 0;
+  padding: 10em;
+}
+
+.contact > fieldset > legend {
+  padding: .5em 0 1em;
+}
+
+/*# sourceMappingURL=index.0651862b.css.map */
