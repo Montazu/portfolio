@@ -118,13 +118,37 @@ legend {
 }
 
 .about {
-  padding: 0 2em;
+  margin: 0 2em;
+  position: relative;
+  overflow: hidden;
 }
 
 .about > fieldset {
   border-top-width: .2em;
+  border-bottom-width: 2px;
   border-left: 0;
   padding-left: 0;
+  position: relative;
+}
+
+.about > fieldset:before, .about > fieldset:after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  z-index: 1;
+  position: absolute;
+}
+
+.about > fieldset:before {
+  background: linear-gradient(45deg, #fff0 0%, #fff0 50%, var(--blue-200) 50%, var(--blue-200) 52.5%, var(--black) 52.5%, var(--black) 100%);
+  top: -31px;
+  right: -2px;
+}
+
+.about > fieldset:after {
+  background: linear-gradient(135deg, #fff0 0%, #fff0 50%, var(--blue-200) 50%, var(--blue-200) 52.5%, var(--black) 52.5%, var(--black) 100%);
+  bottom: -2px;
+  right: -2px;
 }
 
 .about > fieldset > legend {
@@ -141,8 +165,31 @@ legend {
 }
 
 .works > fieldset {
+  border-top: 0;
+  border-bottom: 0;
   border-right: 0;
   padding: 10em;
+  position: relative;
+}
+
+.works > fieldset:before, .works > fieldset:after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  z-index: 1;
+  position: absolute;
+}
+
+.works > fieldset:before {
+  background: linear-gradient(315deg, #fff0 0%, #fff0 50%, var(--blue-200) 50%, var(--blue-200) 52.5%, var(--black) 52.5%, var(--black) 100%);
+  top: -2px;
+  left: -2px;
+}
+
+.works > fieldset:after {
+  background: linear-gradient(225deg, #fff0 0%, #fff0 50%, var(--blue-200) 50%, var(--blue-200) 52.5%, var(--black) 52.5%, var(--black) 100%);
+  bottom: -2px;
+  left: -2px;
 }
 
 .works > fieldset > legend {
@@ -160,9 +207,31 @@ legend {
 }
 
 .contact > fieldset {
+  border-top-width: 2px;
   border-bottom-width: 2px;
   border-left: 0;
   padding: 10em;
+  position: relative;
+}
+
+.contact > fieldset:before, .contact > fieldset:after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  z-index: 1;
+  position: absolute;
+}
+
+.contact > fieldset:before {
+  background: linear-gradient(45deg, #fff0 0%, #fff0 50%, var(--blue-200) 50%, var(--blue-200) 52.5%, var(--black) 52.5%, var(--black) 100%);
+  top: -2px;
+  right: -2px;
+}
+
+.contact > fieldset:after {
+  background: linear-gradient(135deg, #fff0 0%, #fff0 50%, var(--blue-200) 50%, var(--blue-200) 52.5%, var(--black) 52.5%, var(--black) 100%);
+  bottom: -2px;
+  right: -2px;
 }
 
 .contact > fieldset > legend {

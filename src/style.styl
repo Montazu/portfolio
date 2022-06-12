@@ -97,12 +97,34 @@ legend
 	font-size: 2.5rem
 
 .about
-	padding: 0 2em
+	margin: 0 2em
+	position relative
+	overflow: hidden
+
 
 	& > fieldset
 		padding-left: 0
 		border-top-width: .2em
 		border-left: 0
+		border-bottom-width: 2px
+		position relative
+
+		&::before, &::after
+			content: ''
+			position: absolute
+			height: 50px
+			width: 50px
+			z-index: 1
+	
+		&::before
+			background: linear-gradient(45deg, #fff0 0%, #fff0 50%, var(--blue-200) 50%, var(--blue-200) 52.5%, var(--black) 52.5%, var(--black) 100%)
+			top: -31px
+			right: -2px
+			
+		&::after
+			background: linear-gradient(135deg, #fff0 0%, #fff0 50%, var(--blue-200) 50%, var(--blue-200) 52.5%, var(--black) 52.5%, var(--black) 100%)
+			bottom: -2px
+			right: -2px
 
 		& > legend
 			padding: 0 .5em 0 0
@@ -112,12 +134,32 @@ legend
 	text-orientation: upright
 	line-height: 0
 	letter-spacing: -2.4em
-	width 100%
 	padding: 0 2em
-	
+	width 100%
+
 	& > fieldset
 		padding 10em
+		border-top: 0
 		border-right: 0
+		border-bottom: 0
+		position relative
+
+		&::before, &::after
+			content: ''
+			position: absolute
+			height: 50px
+			width: 50px
+			z-index: 1
+	
+		&::before
+			background: linear-gradient(315deg, #fff0 0%, #fff0 50%, var(--blue-200) 50%, var(--blue-200) 52.5%, var(--black) 52.5%, var(--black) 100%)
+			top: -2px
+			left: -2px
+			
+		&::after
+			background: linear-gradient(225deg, #fff0 0%, #fff0 50%, var(--blue-200) 50%, var(--blue-200) 52.5%, var(--black) 52.5%, var(--black) 100%)
+			bottom: -2px
+			left: -2px
 
 		& > legend
 			padding: 0.5em 0 1em 0
@@ -133,8 +175,27 @@ legend
 
 	& > fieldset
 		border-bottom-width: 2px
+		border-top-width: 2px
 		padding 10em
 		border-left: 0
+		position relative
+
+		&::before, &::after
+			content: ''
+			position: absolute
+			height: 50px
+			width: 50px
+			z-index: 1
+	
+		&::before
+			background: linear-gradient(45deg, #fff0 0%, #fff0 50%, var(--blue-200) 50%, var(--blue-200) 52.5%, var(--black) 52.5%, var(--black) 100%)
+			top: -2px
+			right: -2px
+			
+		&::after
+			background: linear-gradient(135deg, #fff0 0%, #fff0 50%, var(--blue-200) 50%, var(--blue-200) 52.5%, var(--black) 52.5%, var(--black) 100%)
+			bottom: -2px
+			right: -2px
 
 		& > legend
 			padding: 0.5em 0 1em 0
