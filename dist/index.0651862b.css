@@ -21,6 +21,7 @@ html {
 
 body {
   background-color: var(--black);
+  color: var(--white);
   font-family: Poppins, sans-serif;
   font-size: 10px;
 }
@@ -118,6 +119,7 @@ legend {
 }
 
 .about {
+  height: auto;
   margin: 0 2em;
   position: relative;
   overflow: hidden;
@@ -236,6 +238,28 @@ legend {
 
 .contact > fieldset > legend {
   padding: .5em 0 1em;
+}
+
+p {
+  padding: 1em 2em;
+  font-size: 1.8em;
+}
+
+ul {
+  width: clamp(10em, 80vw, 50em);
+  grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+  margin: 0 auto;
+  padding: 3em 1em;
+  font-size: 1.4em;
+  list-style: none;
+  display: grid;
+}
+
+ul > li:before {
+  content: "▹ ";
+  color: var(--blue-200);
+  padding-right: .5em;
+  font-weight: bold;
 }
 
 footer {

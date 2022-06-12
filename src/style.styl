@@ -19,6 +19,7 @@ body
 	background-color: var(--black)
 	font-family: 'Poppins', sans-serif
 	font-size: 10px
+	color: var(--white)
 
 main
 	background-image: var(--logo)
@@ -100,6 +101,7 @@ legend
 	margin: 0 2em
 	position relative
 	overflow: hidden
+	height: auto
 
 
 	& > fieldset
@@ -199,6 +201,25 @@ legend
 
 		& > legend
 			padding: 0.5em 0 1em 0
+
+p
+	font-size: 1.8em
+	padding 1em 2em
+
+ul
+	font-size: 1.4em
+	list-style: none
+	padding: 3em 1em
+	margin: 0 auto
+	display: grid
+	grid-template-columns: repeat(auto-fit, minmax(8em, 1fr))
+	width: clamp(10em, 80vw, 50em)
+
+	& > li::before
+		content: "▹ "
+		font-weight: bold
+		color: var(--blue-200)
+		padding-right: .5em
 
 footer
 	height: 30em
