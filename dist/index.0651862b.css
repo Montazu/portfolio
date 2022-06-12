@@ -111,7 +111,6 @@ section {
 
 fieldset {
   border: solid var(--blue-200);
-  height: 100%;
   width: 100%;
   max-width: 130em;
   border-width: .1em .2em;
@@ -168,6 +167,7 @@ legend {
   text-orientation: upright;
   letter-spacing: -2.4em;
   width: 100%;
+  height: auto;
   padding: 0 2em;
   line-height: 0;
 }
@@ -209,6 +209,7 @@ legend {
   text-orientation: upright;
   letter-spacing: -2.4em;
   width: 100%;
+  height: auto;
   padding: 0 2em;
   line-height: 0;
   overflow: hidden;
@@ -218,7 +219,10 @@ legend {
   border-top-width: 2px;
   border-bottom-width: 2px;
   border-left: 0;
-  padding: 10em;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 6em;
+  display: flex;
   position: relative;
 }
 
@@ -266,6 +270,61 @@ ul > li:before {
   color: var(--blue-200);
   padding-right: .5em;
   font-weight: bold;
+}
+
+form {
+  width: 100%;
+  max-width: 70em;
+  align-items: space-between;
+  padding: 0 3em;
+  display: flex;
+}
+
+form > input {
+  width: 100%;
+  background: var(--blue-100);
+  border: 0;
+  border-bottom: 2px solid var(--blue-200);
+  color: var(--white);
+  padding: 1em 1em .8em;
+  font-family: Poppins, sans-serif;
+}
+
+form > input::placeholder {
+  color: var(--white);
+}
+
+form > textarea {
+  width: 100%;
+  background: var(--blue-100);
+  border: 0;
+  border-bottom: 2px solid var(--blue-200);
+  color: var(--white);
+  resize: vertical;
+  min-height: 10em;
+  margin: 1em 0;
+  padding: 1em 1em .8em;
+  font-family: Poppins, sans-serif;
+}
+
+form > textarea::placeholder {
+  color: var(--white);
+}
+
+form > button {
+  color: var(--blue-200);
+  width: fit-content;
+  border: 2px solid var(--blue-200);
+  cursor: pointer;
+  background: 0;
+  padding: .6em 2em;
+  font-size: 1.6em;
+  font-weight: 900;
+}
+
+form > button:hover {
+  color: var(--white);
+  background: var(--blue-100);
 }
 
 footer {

@@ -92,7 +92,6 @@ section
 fieldset
 	border: solid var(--blue-200)
 	border-width: .1em .2em
-	height: 100%
 	width 100%
 	max-width: 130em
 	margin: 0 auto
@@ -143,6 +142,7 @@ legend
 	letter-spacing: -2.4em
 	padding: 0 2em
 	width 100%
+	height: auto
 
 	& > fieldset
 		padding 10em
@@ -179,13 +179,19 @@ legend
 	width 100%
 	overflow: hidden
 	padding: 0 2em
-
+	height: auto
+	
 	& > fieldset
 		border-bottom-width: 2px
 		border-top-width: 2px
-		padding 10em
+		padding-inline-start: 6em
+		padding-inline-end: 6em
 		border-left: 0
 		position relative
+		display: flex
+		justify-content: center
+		align-items: center
+
 
 		&::before, &::after
 			content: ''
@@ -225,6 +231,54 @@ ul
 		font-weight: bold
 		color: var(--blue-200)
 		padding-right: .5em
+
+form
+	width: 100%
+	padding 0 3em
+	max-width: 70em
+	display: flex
+	align-items: space-between
+
+	& > input
+		width 100%
+		border: 0
+		background: var(--blue-100)
+		border-bottom: 2px solid var(--blue-200)
+		padding: 1em 1em .8em 1em
+		color: var(--white)
+		font-family: 'Poppins', sans-serif
+
+		&::placeholder
+			color: var(--white)
+
+	& > textarea
+		width 100%
+		border: 0
+		background: var(--blue-100)
+		border-bottom: 2px solid var(--blue-200)
+		padding: 1em 1em .8em 1em
+		margin: 1em 0
+		color: var(--white)
+		resize: vertical
+		min-height: 10em
+		font-family: 'Poppins', sans-serif
+
+		&::placeholder
+			color: var(--white)
+
+	& > button
+		background: 0
+		color: var(--blue-200)
+		font-weight: 900
+		padding: .6em 2em
+		width: fit-content
+		border: 2px solid var(--blue-200)
+		cursor pointer
+		font-size: 1.6em
+
+		&:hover
+			color: var(--white)
+			background: var(--blue-100)
 
 footer
 	height: 30em
