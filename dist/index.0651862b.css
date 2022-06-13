@@ -119,6 +119,7 @@ fieldset {
 
 legend {
   color: var(--white);
+  background: var(--black);
   font-size: 2.5rem;
   font-weight: 900;
 }
@@ -205,8 +206,6 @@ legend {
 }
 
 .contact {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
   letter-spacing: -2.4em;
   width: 100%;
   height: auto;
@@ -216,6 +215,7 @@ legend {
 }
 
 .contact > fieldset {
+  writing-mode: vertical-rl;
   border-top-width: 2px;
   border-bottom-width: 2px;
   border-left: 0;
@@ -247,6 +247,7 @@ legend {
 }
 
 .contact > fieldset > legend {
+  text-orientation: upright;
   padding: .5em 0 1em;
 }
 
@@ -275,7 +276,7 @@ ul > li:before {
 form {
   width: 100%;
   max-width: 70em;
-  align-items: space-between;
+  justify-content: space-between;
   padding: 0 3em;
   display: flex;
 }
@@ -286,6 +287,7 @@ form > input {
   border: 0;
   border-bottom: 2px solid var(--blue-200);
   color: var(--white);
+  writing-mode: initial;
   padding: 1em 1em .8em;
   font-family: Poppins, sans-serif;
 }
@@ -302,6 +304,7 @@ form > textarea {
   color: var(--white);
   resize: vertical;
   min-height: 10em;
+  writing-mode: initial;
   margin: 1em 0;
   padding: 1em 1em .8em;
   font-family: Poppins, sans-serif;
@@ -316,6 +319,7 @@ form > button {
   width: fit-content;
   border: 2px solid var(--blue-200);
   cursor: pointer;
+  writing-mode: initial;
   background: 0;
   padding: .6em 2em;
   font-size: 1.6em;

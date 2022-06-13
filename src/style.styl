@@ -100,6 +100,7 @@ legend
 	color: var(--white)
 	font-weight: 900
 	font-size: 2.5rem
+	background: var(--black)
 
 .about
 	margin: 0 2em
@@ -172,8 +173,6 @@ legend
 			padding: 0.5em 0 1em 0
 
 .contact
-	writing-mode: vertical-rl
-	text-orientation: upright
 	line-height: 0
 	letter-spacing: -2.4em
 	width 100%
@@ -191,6 +190,7 @@ legend
 		display: flex
 		justify-content: center
 		align-items: center
+		writing-mode: vertical-rl
 
 
 		&::before, &::after
@@ -211,6 +211,7 @@ legend
 			right: -2px
 
 		& > legend
+			text-orientation: upright
 			padding: 0.5em 0 1em 0
 
 p
@@ -237,7 +238,7 @@ form
 	padding 0 3em
 	max-width: 70em
 	display: flex
-	align-items: space-between
+	justify-content: space-between
 
 	& > input
 		width 100%
@@ -247,6 +248,7 @@ form
 		padding: 1em 1em .8em 1em
 		color: var(--white)
 		font-family: 'Poppins', sans-serif
+		writing-mode: initial
 
 		&::placeholder
 			color: var(--white)
@@ -262,6 +264,7 @@ form
 		resize: vertical
 		min-height: 10em
 		font-family: 'Poppins', sans-serif
+		writing-mode: initial
 
 		&::placeholder
 			color: var(--white)
@@ -275,6 +278,7 @@ form
 		border: 2px solid var(--blue-200)
 		cursor pointer
 		font-size: 1.6em
+		writing-mode: initial
 
 		&:hover
 			color: var(--white)
