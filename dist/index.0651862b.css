@@ -331,7 +331,34 @@ form > button:hover {
 }
 
 footer {
-  height: 30em;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 0;
+  font-size: 1em;
+  display: flex;
+}
+
+footer > .wrapper {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: .5em;
+  display: flex;
+}
+
+footer > .wrapper > a {
+  padding: .5em;
+  display: flex;
+}
+
+footer > a {
+  color: var(--white);
+  font-size: 1em;
+  display: contents;
+}
+
+footer > a > svg > path {
+  color: var(--white);
 }
 
 /*# sourceMappingURL=index.0651862b.css.map */
