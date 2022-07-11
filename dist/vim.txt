@@ -1,15 +1,15 @@
 syntax on
-  2 colorscheme pablo
-  3 
-  4 set number
-  5 set autoindent
-  6 " set cursorline
-  7 set nobackup
-  8 set showmatch
-  9 set wildmenu
- 10 set wildmode=list:longest
- 11 set tabstop=4
- 12 
- 13 filetype on
- 14 
- 15 nnoremap <silent><c-s> :<c-u>update<cr>
+colorscheme pablo
+
+set number
+set autoindent
+" set cursorline
+set nobackup
+set showmatch
+set wildmenu
+set wildmode=list:longest
+set tabstop=4
+
+filetype on
+
+nnoremap <silent><c-s> :<c-u>update<cr>
